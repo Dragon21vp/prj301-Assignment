@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
+<Context path="/Assignment" docBase="Assignment" reloadable="true">
     <Resource name="jdbc/LeaveManagementDB"
               auth="Container"
-              type="jakarta.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              username="dat"
-              password="12345"  
+              type="javax.sql.DataSource"
               driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-              url="jdbc:sqlserver://localhost:1433;databaseName=LeaveManagement" />
+              url="jdbc:sqlserver://localhost:1433;databaseName=LeaveManagement"
+              username="dat"
+              password="12345"
+              maxActive="100"
+              maxIdle="30"
+              maxWait="10000" />
 </Context>
