@@ -6,7 +6,26 @@
     <resource-ref>
         <description>DB Connection</description>
         <res-ref-name>jdbc/LeaveManagementDB</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
+        <res-type>jakarta.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
     </resource-ref>
-</web-app>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateLeaveServlet</servlet-name>
+        <servlet-class>CreateLeaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateLeaveServlet</servlet-name>
+        <url-pattern>/CreateLeaveServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web.xml>
