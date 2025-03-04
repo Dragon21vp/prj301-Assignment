@@ -29,6 +29,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div>
                 <button type="submit" class="btn btn-primary">Log in</button>
             </form>
+            <form action="views/auth/Login.jsp" method="get">
+                 <label for="username">Username:</label>
+                 <input type="text" id="username" name="username" required/>
+                  <label for="password">Password:</label>
+                   <input type="password" id="password" name="password" required/>
+                     <input type="submit" value="Log in"/>
+            </form>
             <script>
                 document.querySelector('form').addEventListener('submit', function(event) {
                     event.preventDefault();
